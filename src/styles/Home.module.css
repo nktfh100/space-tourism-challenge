@@ -1,0 +1,77 @@
+.pageContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.left h1 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+/*
+To stop children elements from affecting parent width
+https://stackoverflow.com/a/36092670/14892663
+*/
+.left p {
+    min-width: 100%;
+    width: 0;
+}
+
+.btnContainer a {
+    display: block;
+    text-transform: uppercase;
+    color: #0b0d17;
+    font-size: 2rem;
+    letter-spacing: 0.13rem;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 17rem;
+    height: 17rem;
+    line-height: 17rem;
+    text-align: center;
+    transition: 0.2s;
+    outline: 0rem solid transparent;
+}
+
+.btnContainer a:hover {
+    outline: 4rem solid rgba(36, 38, 47, 0.5);
+}
+
+@media screen and (max-width: 1010px) {
+    .pageContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .btnContainer a {
+        width: 15rem;
+        height: 15rem;
+        line-height: 15rem;
+    }
+    .btnContainer a:hover {
+        outline-width: 3rem;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .left p {
+        min-width: 85%;
+        width: 85%;
+        margin: auto;
+    }
+    .btnContainer a {
+        font-size: 1.25rem;
+        width: 9.38rem;
+        height: 9.38rem;
+        line-height: 9.38rem;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .btnContainer a {
+        transition: 0s;
+    }
+}

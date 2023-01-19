@@ -1,0 +1,135 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.pageContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    gap: 8rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8rem;
+    gap: 5rem;
+    width: 50%;
+}
+
+.right {
+    margin-top: 1rem;
+}
+.right img {
+    width: 32rem;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.techNavItem button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 2rem;
+}
+
+.techNavItem button:hover {
+    border: 1px solid white;
+}
+
+.techNavItemActive button {
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+}
+.terminology {
+    margin-bottom: 0.7rem;
+}
+
+.title {
+    margin-bottom: 0.8rem;
+}
+
+.desc {
+    width: 90%;
+}
+
+@media screen and (max-width: 1010px) {
+    .pageContentContainer {
+        flex-direction: column-reverse;
+        margin-top: 1.5rem;
+        gap: 0rem;
+    }
+
+    .left {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .nav {
+        align-self: center;
+    }
+
+    .nav ul {
+        flex-direction: row;
+    }
+
+    .techNavItem button {
+        width: 3.75rem;
+        height: 3.75rem;
+        font-size: 1.5rem;
+    }
+
+    .contentContainer {
+        margin-top: 0rem;
+        text-align: center;
+    }
+
+    .terminology {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .desc {
+        margin: auto;
+    }
+
+    .right img {
+        width: 100vw;
+        /* Hardcoded height of the images to prevent layout shift when the image is not loaded */
+        min-height: calc(0.4 * 100vw);
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .techNavItem button {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+
+    .terminology {
+        font-size: 0.88rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}

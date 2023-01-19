@@ -1,0 +1,176 @@
+.navbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 3rem;
+    margin-right: 5.5rem;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-right: -2rem;
+    z-index: 2;
+}
+
+.hamburgerBtn {
+    display: none;
+}
+
+.hamburgerBtn img {
+    width: 1.5rem;
+}
+
+.navbarContainer nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    padding-left: 5rem;
+    padding-right: 10rem;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1;
+}
+
+.navbarEle {
+    text-transform: uppercase;
+    color: white;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.19rem;
+}
+
+.linkContent {
+    height: calc(6rem - 0.38rem);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-top: 0.19rem inset transparent;
+    border-bottom: 0.19rem inset transparent;
+    transition: 0.2s;
+}
+
+.linkContent span:first-child {
+    font-weight: bold;
+    margin-right: 0.69rem;
+}
+
+.linkContent:hover {
+    border-bottom: 0.19rem inset #979797;
+}
+
+.navbarEleActive .linkContent {
+    border-bottom: 0.19rem inset white;
+}
+
+@media screen and (max-width: 1010px) {
+    .navbarContainer {
+        padding-top: 0rem;
+    }
+    .logo {
+        margin-right: 0rem;
+    }
+    .line {
+        display: none;
+    }
+    .navbarContainer nav ul {
+        padding-left: 1rem;
+        padding-right: 0rem;
+    }
+
+    .navbarEle {
+        font-size: 0.88rem;
+        letter-spacing: 0.13rem;
+    }
+
+    .linkContent span:first-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .logo {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-left: 1.5rem;
+    }
+
+    .hamburgerBtn {
+        display: block;
+        margin-right: 1.5rem;
+        z-index: 2;
+    }
+
+    .navbarContainer {
+        padding-top: 1rem;
+    }
+
+    .navbarContainer nav ul {
+        flex-direction: column;
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .navbarContainer nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbarContainer nav ul {
+        width: 70vw;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        position: fixed;
+        transition: 0.2s;
+        padding-top: 5rem;
+    }
+
+    .navbarContainerShown nav ul {
+        right: 0%;
+    }
+
+    .navbarEle {
+        margin: 0;
+        font-size: 1rem;
+        letter-spacing: 0.19rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 2rem;
+    }
+
+    .linkContent {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        height: unset;
+        border-top: 0rem inset transparent;
+        border-bottom: 0rem inset transparent;
+        border-left: 0.25rem inset transparent;
+        border-right: 0.25rem inset transparent;
+    }
+
+    .linkContent:hover {
+        border-bottom: 0rem inset #979797;
+    }
+
+    .navbarEleActive .linkContent {
+        border-bottom: 0rem inset white;
+        border-right: 0.25rem inset white;
+    }
+
+    .linkContent span:first-child {
+        display: block;
+    }
+}

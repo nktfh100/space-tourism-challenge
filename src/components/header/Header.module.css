@@ -1,0 +1,51 @@
+.headerContainer {
+    display: flex;
+    gap: 1.75rem;
+    margin-top: 6rem;
+    margin-left: 10rem;
+    align-self: flex-start;
+}
+
+.pageNum,
+.title {
+    letter-spacing: 0.31rem;
+    font-size: 1.75rem;
+    color: rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+}
+.title {
+    color: white;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1010px) {
+    .headerContainer {
+        gap: 1.1rem;
+        align-self: flex-start;
+        margin-top: 1rem;
+        margin-left: 2.5rem;
+    }
+
+    .pageNum,
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .title {
+        color: white;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .headerContainer {
+        align-self: center;
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+
+    .pageNum,
+    .title {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,164 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.pageContentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    margin-top: 6rem;
+    height: 60%;
+}
+
+.contentContainer {
+    margin-top: 1rem;
+}
+
+.role {
+    color: rgba(255, 255, 255, 0.25);
+    margin-bottom: 1rem;
+}
+
+.name {
+    margin-bottom: 1.5rem;
+}
+
+.crewNav {
+    margin-top: auto;
+}
+
+.crewNav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.crewNavItem button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.crewNavItem button:hover {
+    background-color: #979797;
+}
+
+.crewNavItemActive button {
+    background-color: white !important;
+}
+
+.right {
+    align-self: flex-end;
+    width: 35%;
+}
+
+.right img {
+    max-width: 35vw;
+    max-height: 70vh;
+}
+
+@media screen and (max-width: 1010px) {
+    .pageContentContainer {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .left {
+        flex-basis: auto;
+        height: unset;
+        align-items: center;
+        margin-top: 3.5rem;
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.31rem;
+    }
+
+    .name {
+        font-size: 2.5rem;
+        letter-spacing: 0.31rem;
+        margin-bottom: 1rem;
+    }
+
+    .bio {
+        width: 85%;
+        text-align: center;
+        min-height: 6.5rem;
+    }
+
+    .crewNav {
+        margin-top: 0rem;
+    }
+
+    .crewNavItem button {
+        width: 0.63rem;
+        height: 0.63rem;
+    }
+
+    .right {
+        margin-top: 1rem;
+        align-self: center;
+        height: 42vh;
+        width: unset;
+    }
+
+    .right img {
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .pageContentContainer {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    .left {
+        flex-direction: column-reverse;
+        margin-top: 0;
+    }
+
+    .role {
+        font-size: 1rem;
+    }
+
+    .name {
+        font-size: 1.5rem;
+    }
+
+    .right {
+        margin-top: 2rem;
+        max-height: 35vh;
+        width: 80%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        margin-bottom: 2rem;
+    }
+
+    .crewNav {
+        margin-bottom: 2rem;
+    }
+}

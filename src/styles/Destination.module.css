@@ -1,0 +1,168 @@
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    flex-grow: 1;
+    width: 80%;
+    position: relative;
+}
+
+.planetImg {
+    width: 27rem;
+    height: 27rem;
+}
+
+.planetsNav {
+    margin-bottom: 4rem;
+}
+
+.planetsNav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2.25rem;
+    list-style: none;
+    color: white;
+}
+
+.planetNavEle button {
+    color: #d0d6f9;
+    border-top: 0.19rem inset transparent;
+    border-bottom: 0.19rem inset transparent;
+    padding-bottom: 0.75rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+.planetNavEle button:hover {
+    border-bottom: 0.19rem inset #979797;
+}
+
+.planetNavEleActive button {
+    color: white;
+    border-bottom: 0.19rem inset white !important;
+}
+
+.title {
+    margin-bottom: 0.9rem;
+}
+
+.desc {
+    max-width: 30rem;
+    margin-bottom: 3.3rem;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 1px solid #383b4b;
+    padding-top: 1.75rem;
+    gap: 5rem;
+}
+
+.planetInfoEle p:first-child {
+    font-size: 0.88rem;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+    color: #d0d6f9;
+}
+
+.planetInfoEle p:last-child {
+    font-size: 1.75rem;
+    letter-spacing: 0.13rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+    .contentContainer {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+
+    .planetImg {
+        width: 18rem;
+        height: 18rem;
+        margin-bottom: 1rem;
+    }
+
+    .planetContentContainer {
+        align-items: center;
+        text-align: center;
+    }
+
+    .planetsNav {
+        margin-bottom: 1rem;
+    }
+
+    .planetsNav ul {
+        justify-content: center;
+    }
+
+    .planetNavEle button {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 5rem;
+        margin-bottom: 0rem;
+    }
+
+    .desc {
+        margin-bottom: 1rem;
+    }
+
+    .infoContainer {
+        justify-content: center;
+        padding-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .contentContainer {
+        margin-top: 2rem;
+    }
+
+    .planetImg {
+        width: 11rem;
+        height: 11rem;
+        margin-bottom: 1rem;
+    }
+
+    .planetNavEle button {
+        font-size: 0.88rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .desc {
+        font-size: 0.94rem;
+        margin-bottom: 2rem;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding-top: 2rem;
+    }
+}
