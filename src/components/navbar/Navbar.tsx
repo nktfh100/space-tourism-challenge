@@ -1,16 +1,9 @@
 
-import { Barlow_Condensed } from '@next/font/google'
+import { barlowCondensed } from '@/fonts'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useRef, useState } from 'react'
-
+import { useState } from 'react'
 import styles from './Navbar.module.css'
-
-const barlowCondensed = Barlow_Condensed({
-    weight: ['400', '700'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-})
 
 function addZero(i: number): string {
     if (i < 10) {
@@ -58,7 +51,7 @@ export default function Navbar() {
                     <img alt="" src={navShown ? "/icon-close.svg" : "/icon-hamburger.svg"} />
                 </button>
                 <ul>
-                    {data.map((data, i) => <NavbarElement onClick={() => setNavShown(false)} key={i} i={i} title={data.title} target={data.target} />)}
+                    {data.map((data, i) => <NavbarElement key={i} onClick={() => setNavShown(false)} i={i} title={data.title} target={data.target} />)}
                 </ul>
             </nav>
         </header>

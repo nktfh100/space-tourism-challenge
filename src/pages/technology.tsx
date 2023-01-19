@@ -1,7 +1,7 @@
 import Header from "@/components/header/Header"
 import useWindowSize from "@/hooks/useWindowSize"
 import styles from "@/styles/Technology.module.css"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { motion } from "framer-motion"
 
 const data: { name: string, images: { portrait: string, landscape: string }, description: string }[] = [
